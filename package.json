@@ -10,7 +10,7 @@
     "react": "16.4.1",
     "react-native": "0.56.0",
     "rn-camera-roll": "0.0.5",
-    "rn-fetch-blob": "^0.10.12"
+    "rn-fetch-blob": "^0.10.13"
   },
   "devDependencies": {
     "babel-jest": "23.4.2",

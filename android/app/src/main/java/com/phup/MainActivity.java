@@ -2,8 +2,6 @@ package com.phup;
 
 import com.facebook.react.ReactActivity;
 
-import fr.bamlab.rncameraroll.CameraRollPackage;
-
 public class MainActivity extends ReactActivity {
 
     /**

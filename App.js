@@ -75,15 +75,22 @@ export default class App extends Component<Props> {
     { name : 'image', filename: 'image.jpg', data: RNFetchBlob.wrap(this.state.photos[this.state.index].node.image.uri)},
 
     ]).then((resp) => {
+      let error = ""
+      if (resp.data == "File uploaded, no problem!" || resp.data == "File uploaded, but there was a problem with the db"){
+        error = resp.data
+      }else{
+        error = "There was a problem with the upload"
+      }
       Alert.alert(
-        JSON.stringify(resp.data)
+        JSON.stringify(error)
       //  'Upload complete'
       )
     }).catch((err) => {
-      Alert.alert(
-        JSON.stringify(err)
+      
+      //Alert.alert(
+        //console.log(err)
         //'Upload failed'
-      )
+      //)
     })
   }
 
